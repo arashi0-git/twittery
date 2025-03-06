@@ -1,0 +1,16 @@
+<div class="post-detail">
+  <h2>投稿詳細</h2>
+  
+  <div class="post-content">
+    <%= @post.content %>
+  </div>
+
+  <div class="action-buttons">
+    <%= link_to "編集", edit_post_path(@post), class: "link-button" %>
+    <%= link_to "削除", post_path(@post), 
+                method: :delete, 
+                data: { confirm: "本当に削除しますか？" }, 
+                class: "link-button delete-button" %>
+    <%= link_to "戻る", posts_path, class: "link-button" %>
+  </div>
+</div> 
